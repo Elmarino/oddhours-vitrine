@@ -1,4 +1,4 @@
-import { Button } from '@/src/components/ui/button';
+import { Button } from '@/src/components/ui/button_';
 import { Input } from '@/src/components/ui/input';
 import { Label } from '@/src/components/ui/label';
 import Form from 'next/form';

@@ -1,16 +1,23 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/src/components/header';
+import localFont from 'next/font/local';
+import { Footer } from '@/src/components/footer';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
+const hedvig = localFont({
+  src: '../public/fonts/HedvigLettersSerif-Regular.otf',
+  variable: '--font-hedvig',
+  display: 'swap'
 });
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
+const louises = localFont({
+  src: '../public/fonts/Louise-Regular.otf',
+  variable: '--font-louises',
+  display: 'swap'
+});
+const uncut = localFont({
+  src: '../public/fonts/UncutSans-Variable.ttf',
+  variable: '--font-uncut',
+  display: 'swap'
 });
 
 export const metadata: Metadata = {
@@ -24,12 +31,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`bg-black ${hedvig.variable} ${uncut.variable} antialiased`}
+    >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-black ${hedvig.variable} ${uncut.variable} antialiased`}
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
