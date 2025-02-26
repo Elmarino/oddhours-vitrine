@@ -1,4 +1,3 @@
-import { Citation } from './../../../node_modules/.prisma/client/index.d';
 import { prisma } from '@/src/lib/prisma';
 import { NextRequest, NextResponse } from 'next/server';
 

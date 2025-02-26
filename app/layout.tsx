@@ -9,11 +9,7 @@ const hedvig = localFont({
   variable: '--font-hedvig',
   display: 'swap'
 });
-const louises = localFont({
-  src: '../public/fonts/Louise-Regular.otf',
-  variable: '--font-louises',
-  display: 'swap'
-});
+
 const uncut = localFont({
   src: '../public/fonts/UncutSans-Variable.ttf',
   variable: '--font-uncut',

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Card, CardHeader } from './ui/card';
 
 export function Header() {
   return (

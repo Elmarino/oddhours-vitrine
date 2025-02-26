@@ -2,13 +2,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import {
-  Autoplay,
-  EffectCreative,
-  Keyboard,
-  Navigation,
-  Pagination
-} from 'swiper/modules';
+import { Autoplay, EffectCreative, Keyboard, Pagination } from 'swiper/modules';
 import Button from '@/src/components/ui/button';
 
 const images = [
