@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay, EffectCreative, Keyboard, Pagination } from 'swiper/modules';
 import Button from '@/src/components/ui/button';
-import Image from 'next/image';
 
 const images = [
   '/images/P1-BedForPet.webp', // Remplacez par vos images
@@ -64,13 +63,13 @@ export default function Home() {
             <span className="font-cursive font-normal">efficient</span> brands.
           </h1>
           <p className="mb-10">
-            We're <b>Out of Office</b>, a creative collective based in Paris and
-            Prague.
+            We&apos;re <b>Out of Office</b>, a creative collective based in
+            Paris and Prague.
             <br />
             We help companies build brands that are unapologetically authentic.
             <br />
-            We're industry agnostic—we care about the value you bring to the
-            world.
+            We&apos;re industry agnostic—we care about the value you bring to
+            the world.
           </p>
           <p className="mb-20">
             <b>Capabilities</b>
