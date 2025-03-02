@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export function Footer() {
   return (
     <footer className="relative z-10 sm:w-full w-2/3 px-[5vw] mt-32 mb-14 font-semibold text-lg text-white">
