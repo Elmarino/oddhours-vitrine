@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <footer className="relative z-10 w-full px-[5vw]">
+    <footer className="relative z-10 w-full px-[5vw] mt-64">
       <div className="w-full mb-14">
         <Image
           src="/images/icons/wordmark.svg"

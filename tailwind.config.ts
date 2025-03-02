@@ -12,7 +12,8 @@ export default {
     extend: {
       fontFamily: {
         title: ['var(--font-hedvig)'],
-        content: ['var(--font-uncut)']
+        content: ['var(--font-uncut)'],
+        cursive: ['var(--font-louises)']
       },
       colors: {
         accent: '#468FEA',

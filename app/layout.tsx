@@ -10,6 +10,12 @@ const hedvig = localFont({
   display: 'swap'
 });
 
+const louises = localFont({
+  src: '../public/fonts/Louise-Regular.otf',
+  variable: '--font-louises',
+  display: 'swap'
+});
+
 const uncut = localFont({
   src: '../public/fonts/UncutSans-Variable.ttf',
   variable: '--font-uncut',
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-black ${hedvig.variable} ${uncut.variable} antialiased`}
+      className={`bg-black ${hedvig.variable} ${uncut.variable} ${louises.variable} antialiased`}
     >
       <body
         className={`bg-black ${hedvig.variable} ${uncut.variable} antialiased`}
