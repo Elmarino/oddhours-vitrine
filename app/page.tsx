@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay, EffectCreative, Keyboard, Pagination } from 'swiper/modules';
 import Button from '@/src/components/ui/button';
+import Image from 'next/image';
 
 const images = [
   '/images/P1-BedForPet.webp', // Remplacez par vos images
@@ -19,43 +20,47 @@ const images = [
 export default function Home() {
   return (
     <div className="relative">
-      {/* <div className="absolute z-20 w-full flex justify-center py-[2vh]">
-        <Image
-          src="/images/icons/symbol.svg"
-          alt="Logo Out Of Office"
-          style={{ objectFit: 'contain' }}
-          width={200}
-          height={200}
-          className="mix-blend-hard-light"
-        />
-      </div> */}
-
-      <Swiper
-        slidesPerView={1}
-        modules={[Keyboard, Pagination, Autoplay, EffectCreative]}
-        loop={true}
-        keyboard={{
-          enabled: true
-        }}
-        autoplay={{
-          delay: 4000, // Délai entre les transitions (en ms)
-          disableOnInteraction: false // Ne pas désactiver l'autoplay après une interaction
-        }}
-        className="relative p-10 md:h-screen h-[90vh]"
-      >
-        {images.map((src, index) => (
-          <SwiperSlide key={index} className="flex items-center justify-center">
-            <div
-              className="w-full h-full bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${src})`
-              }}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="flex justify-start items-end md:min-h-screen md:mt-0 mt-48 pl-[5vw]">
-        <div className="text-white w-full md:px-0 px-14 font-content md:text-lg text-lg">
+      <div className="relative">
+        <div className="absolute bottom-8 right-8 z-20 w-[100px] md:w-[200px]">
+          <Image
+            src="/images/icons/symbol.svg"
+            alt="Logo Out Of Office"
+            style={{ objectFit: 'contain' }}
+            className="w-full"
+            width={0}
+            height={0}
+          />
+        </div>
+        <Swiper
+          slidesPerView={1}
+          modules={[Keyboard, Pagination, Autoplay, EffectCreative]}
+          loop={true}
+          keyboard={{
+            enabled: true
+          }}
+          autoplay={{
+            delay: 4000, // Délai entre les transitions (en ms)
+            disableOnInteraction: false // Ne pas désactiver l'autoplay après une interaction
+          }}
+          className="relative p-10 md:h-screen h-[90vh]"
+        >
+          {images.map((src, index) => (
+            <SwiperSlide
+              key={index}
+              className="flex items-center justify-center"
+            >
+              <div
+                className="w-full h-full bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${src})`
+                }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="flex justify-start items-end md:min-h-screen md:mt-0 mt-48 md:pl-[5vw]">
+        <div className="text-white w-full md:px-0 px-[5vw] font-content md:text-lg text-lg">
           <h1 className="font-bold md:text-7xl sm:text-5xl text-4xl mb-20 ">
             We build{' '}
             <span className="font-cursive font-normal">expressive</span>
