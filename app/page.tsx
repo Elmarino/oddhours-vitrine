@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className="relative">
       <div className="relative">
-        <div className="fixed bottom-8 right-8 z-20 w-[100px] md:w-[200px] mix-blend-difference">
+        <div className="fixed bottom-8 right-8 z-20 w-[100px] md:w-[200px] mix-blend-soft-light">
           <Image
             src="/images/icons/symbol.svg"
             alt="Logo Out Of Office"
