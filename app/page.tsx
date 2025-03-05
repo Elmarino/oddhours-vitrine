@@ -18,10 +18,14 @@ const images = [
 ];
 
 export default function Home() {
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:hello@out-of-office.work';
+  };
+
   return (
     <div className="relative">
       <div className="relative">
-        <div className="absolute bottom-8 right-8 z-20 w-[100px] md:w-[200px]">
+        <div className="fixed bottom-8 right-8 z-20 w-[100px] md:w-[200px] mix-blend-difference">
           <Image
             src="/images/icons/symbol.svg"
             alt="Logo Out Of Office"
@@ -86,8 +90,8 @@ export default function Home() {
           </p>
 
           <div className="flex md:flex-row flex-col md:gap-10 gap-5 items-start">
-            <Button text="Ask for our portfolio" />
-            <Button text="New projects" />
+            <Button text="Ask for our portfolio" onClick={handleEmailClick} />
+            <Button text="New projects" onClick={handleEmailClick} />
           </div>
         </div>
       </div>
