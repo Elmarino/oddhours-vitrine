@@ -18,6 +18,10 @@ const images = [
 ];
 
 export default function Home() {
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:hello@out-of-office.work';
+  };
+
   return (
     <div className="relative">
       <div className="relative">
