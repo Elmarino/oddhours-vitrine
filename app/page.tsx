@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay, EffectCreative, Keyboard, Pagination } from 'swiper/modules';
@@ -18,6 +19,29 @@ const images = [
 ];
 
 export default function Home() {
+  const [blendMode, setBlendMode] = useState('soft-light');
+  useEffect(() => {
+    const handleScroll = () => {
+      // Calculate the equivalent of bottom-8 margin plus 200px
+      const scrollThreshold = /* window.innerHeight + */ 120; // 32px is the equivalent of bottom-8 margin
+      console.log(window.scrollY, scrollThreshold);
+      // Check if we've scrolled past the calculated threshold
+      if (window.scrollY > scrollThreshold) {
+        setBlendMode('difference');
+      } else {
+        setBlendMode('soft-light');
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const handleEmailClick = () => {
     window.location.href = 'mailto:hello@out-of-office.work';
   };
@@ -25,7 +49,9 @@ export default function Home() {
   return (
     <div className="relative">
       <div className="relative">
-        <div className="fixed bottom-8 right-8 z-20 w-[100px] md:w-[200px] mix-blend-soft-light">
+        <div
+          className={`fixed bottom-8 right-8 z-20 w-[100px] md:w-[200px] mix-blend-${blendMode}`}
+        >
           <Image
             src="/images/icons/symbol.svg"
             alt="Logo Out Of Office"
@@ -46,7 +72,7 @@ export default function Home() {
             delay: 4000, // Délai entre les transitions (en ms)
             disableOnInteraction: false // Ne pas désactiver l'autoplay après une interaction
           }}
-          className="relative p-10 md:h-screen h-[90vh]"
+          className="relative p-10 h-screen"
         >
           {images.map((src, index) => (
             <SwiperSlide
