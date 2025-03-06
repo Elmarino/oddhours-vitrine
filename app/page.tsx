@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay, EffectCreative, Keyboard, Pagination } from 'swiper/modules';
@@ -20,11 +20,11 @@ const images = [
 
 export default function Home() {
   const [blendMode, setBlendMode] = useState('soft-light');
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       // Calculate the equivalent of bottom-8 margin plus 200px
-      const scrollThreshold = /* window.innerHeight + */ 120; // 32px is the equivalent of bottom-8 margin
-      console.log(window.scrollY, scrollThreshold);
+      const scrollThreshold = /* window.innerHeight + */ 150; // 32px is the equivalent of bottom-8 margin
+      console.log(window.scrollY > scrollThreshold);
       // Check if we've scrolled past the calculated threshold
       if (window.scrollY > scrollThreshold) {
         setBlendMode('difference');
