@@ -26,7 +26,7 @@ export default function Home() {
     <div className="relative">
       <div className="relative">
         <div
-          className={`fixed bottom-8 right-8 z-20 w-[100px] md:w-[200px] opacity-90`}
+          className={`fixed bottom-8 right-8 z-20 w-[100px] md:w-[200px] opacity-90 mix-blend-difference`}
         >
           <Image
             src="/images/icons/symbol.svg"
