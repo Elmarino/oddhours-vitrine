@@ -1,9 +1,16 @@
+'use client';
 export function Footer() {
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:contact@oddhours.studio';
+  };
+
   return (
-    <footer className="relative z-10 sm:w-full w-2/3 px-[5vw] mt-32 mb-8 font-semibold text-lg text-white">
-      <div className="flex flex-col md:flex-row md:gap-40 gap-5 w-full mb-3 md:mb-0">
-        <p>©2025 - Out of Office</p>
-        <p>Based in Paris & Prague, working globally</p>
+    <footer className="absolute bottom-0 z-10 w-full px-[2vw] pb-[3vh] flex flex-col justify-center items-center">
+      <div className="flex flex-row justify-between items-start md:items-center w-full px-5 py-10 border-y border-light">
+        <p className="font-ronzino text-light text-xl">
+          new biz — <span className="hover:underline cursor-pointer" onClick={handleEmailClick}>contact@oddhours.studio</span>
+        </p>
+        <p className="font-ronzino text-light text-xl hidden md:block">©2025</p>
       </div>
     </footer>
   );

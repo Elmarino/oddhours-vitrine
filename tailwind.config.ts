@@ -13,11 +13,14 @@ export default {
       fontFamily: {
         title: ['var(--font-hedvig)'],
         content: ['var(--font-uncut)'],
-        cursive: ['var(--font-louises)']
+        cursive: ['var(--font-louises)'],
+        director: ['var(--font-directory)'],
+        ronzino: ['var(--font-ronzino)'],
       },
       colors: {
         accent: '#468FEA',
-        background: 'hsl(var(--background))',
+        background: '#1B1A0E',
+        light: '#FFFCF0',
         foreground: 'hsl(var(--foreground))',
         card: {
           DEFAULT: 'hsl(var(--card))',
@@ -52,7 +55,7 @@ export default {
           '3': 'hsl(var(--chart-3))',
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))'
-        }
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',

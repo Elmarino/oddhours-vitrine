@@ -22,6 +22,18 @@ const uncut = localFont({
   display: 'swap'
 });
 
+const directory = localFont({
+  src: '../public/fonts/Director-Regular.otf',
+  variable: '--font-directory',
+  display: 'swap'
+});
+
+const ronzino = localFont({
+  src: '../public/fonts/Ronzino-Regular.otf',
+  variable: '--font-ronzino',
+  display: 'swap'
+});
+
 export const metadata: Metadata = {
   title: 'Out Of Office',
   description: 'We build expressive and efficient brands.',
@@ -40,10 +52,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-black ${hedvig.variable} ${uncut.variable} ${louises.variable} antialiased`}
+      className={`bg-background ${hedvig.variable} ${uncut.variable} ${louises.variable} ${directory.variable} ${ronzino.variable} antialiased`}
     >
       <body
-        className={`bg-black ${hedvig.variable} ${uncut.variable} antialiased`}
+        className={`bg-background ${hedvig.variable} ${uncut.variable} ${directory.variable} ${ronzino.variable} antialiased`}
       >
         <Header />
         {children}
