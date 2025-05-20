@@ -35,7 +35,7 @@ const ronzino = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Out Of Office',
+  title: 'Odd Hours',
   description: 'We build expressive and efficient brands.',
   icons: {
     icon: [
